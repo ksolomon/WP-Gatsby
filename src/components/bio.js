@@ -23,6 +23,9 @@ const Bio = () => {
     }
   `)
 
+  // (KS) Having the Twitter handle the same as the author name makes no sense.  Let's make that a constant.
+  const twitterHandle = 'KeithInWPG'
+
   const avatarUrl = author?.avatar?.url
 
   return (
@@ -40,8 +43,9 @@ const Bio = () => {
           {` `}
           {author?.description || null}
           {` `}
-          {author?.twitter && (
-            <a href={`https://twitter.com/${author?.twitter || ``}`}>
+          {/* (KS) Use Twitter handle constant instead of the author name. */}
+          {twitterHandle && (
+            <a target="_blank" rel="noreferrer" href={`https://twitter.com/${twitterHandle}`}>
               You should follow them on Twitter
             </a>
           )}
