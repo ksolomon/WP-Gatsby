@@ -29,6 +29,7 @@ module.exports = {
         url:
           process.env.WPGRAPHQL_URL ||
           `https://keithsolomon.net/graphql`,
+        allow404Images: true
       },
     },
 
